@@ -17,3 +17,7 @@ spring:
           uri: lb://customer-service
           predicates:
             - Path=/customers/**
+        - id: test-service
+          uri: https://jsonplaceholder.typicode.com
+          predicates:
+            - Path=/todos/**
