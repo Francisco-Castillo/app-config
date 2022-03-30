@@ -10,7 +10,16 @@ spring:
   appplication:
     name: gateway-service
   cloud:
-    gateway: 
+    gateway:
+      globalcors:
+        cors-configuration:
+          '[/**]':
+            allowedOrigins: "https://ejemplo.io"
+            allowedMethods:
+            - GET
+            - POST
+            - PUT
+            - DELETE
       discovery:
         locator:
           enabled: true
